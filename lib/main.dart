@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import "package:flutter/material.dart";
 
@@ -35,6 +36,8 @@ class MyApp extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    AudioPlayer audioPlayer = AudioPlayer();
+    audioPlayer.play("assets/song.mp3");
     return MaterialApp(
       title: "Happy Birthday Muntaha",
       home: Scaffold(
@@ -57,7 +60,7 @@ class MyApp extends StatelessWidget {
               ),
               items: images
                   .map((e) => Stack(
-                        fit: StackFit.expand,
+                        fit: StackFit.loose,
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20),
