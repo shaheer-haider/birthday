@@ -1,4 +1,4 @@
-# birthday
+# birthday_app
 
 A new Flutter project.
 
